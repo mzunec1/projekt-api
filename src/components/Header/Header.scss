@@ -1,46 +1,43 @@
-.header {
-    background-color: var(--color-bg-secondary);
-}
-.header__inner {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-}
+@import "../../index.scss";
 
-.header__nav {
-    display: none;
-}
+.Header {
+    background-color: $color-bg-secondary;
 
-.header__link {
-    margin-right: 32px;
-    line-height: 80px;
-    transition: color 0.3s ease-out;
-}
-
-@media screen and (min-width: 768px) {
-    .header__inner {
-        padding: 0 32 px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .header__inner {
-        padding: 0;
-        max-width: 930px;
-        margin: 0 auto;
-    }
-
-    .header__nav {
+    &-Inner {
+        height: 80px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        padding: 0 24px;
+
+        @media screen and (min-width: 768px) {
+            padding: 0 32 px;
+            
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 0;
+            max-width: 930px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width: 1300px) {
+            max-width: 1280px;
+        }       
+
+    }
+    
+    &-Nav {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            align-items: center; 
+        }
+    }
+    
+    &-Link {
+        margin-right: 32px;
+        line-height: 80px;
+        transition: color 0.3s ease-out;
     }
 }
 
-@media screen and (min-width: 1300px) {
-    .header__inner {
-        max-width: 1280px;
-    }
-
-}
